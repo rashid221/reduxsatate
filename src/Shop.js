@@ -11,7 +11,7 @@ const Shop = () => {
         address:'bareilly'
     }
     const dispatch = useDispatch();
-    const {withdrawMoney,depositMoney,addCart}=bindActionCreators(actionCreators,dispatch);
+    const {withdrawMoney,depositMoney,addCart,removeCart}=bindActionCreators(actionCreators,dispatch);
     const balance = useSelector(state=>state.amount);
     return (
         <>
@@ -25,6 +25,8 @@ const Shop = () => {
          Update Balance  
          <button className='btn btn-primary mx-2' onClick={()=>{dispatch(actionCreators.depositMoney(100))}}>+</button> */}
         <button className='btn btn-warning mx-2' onClick={()=>{addCart(1)}}>Add To Cart</button>
+        <button className='btn btn-warning mx-2' onClick={()=>{removeCart(1)}}>Remove To Cart</button>
+
         </div>
         </div>
         

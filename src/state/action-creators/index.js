@@ -25,5 +25,13 @@ export const addCart = (product) => {
   };
 };
 
+export const removeCart = (product) => {
+  return (dispatch) => {
+    dispatch({
+      type: "removeCart",
+      payload: product,
+    });
+  };
+};
 
 
