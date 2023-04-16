@@ -2,14 +2,13 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const Navbars = () => {
-  const amount = useSelector(state => state.amount);
-  const cart = useSelector(state => state.product);
+ 
   return (
     <>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            State bank of Corse
+          
           </a>
           <button
             className="navbar-toggler"
@@ -31,7 +30,7 @@ const Navbars = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link text-white" href="/">
-                  Cart : {cart}
+                
                 </a>
               </li>
            
@@ -39,7 +38,7 @@ const Navbars = () => {
             <div>
             
               <button className="btn btn-primary" disabled={true}>
-                Your Balance : {amount}
+              
               </button>
             </div>
           </div>

@@ -1,3 +1,24 @@
+export const getApiData = () =>{
+  return async(dispatch,getState)=>{
+    const response = await fetch("https://fakestoreapi.com/products");
+    const data = await response.json(); 
+  dispatch({
+    type:"setProducts",
+    payload:data,
+   })
+  }
+}
+
+export const addtoCart = (value)=>{
+return (dispatch) =>{
+  dispatch({
+    type:"add",
+    payload: value,
+  })
+}
+
+}
+
 export const depositMoney = (amount) => {
   return (dispatch) => {
     dispatch({
