@@ -1,8 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Navbars = () => {
- 
+  const getShow = useSelector((state) => state.getValue);
   return (
     <>
       <nav className="navbar navbar-expand-lg">
@@ -25,21 +26,25 @@ const Navbars = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link" aria-current="page" href="/">
-                  Home
+                London Fox
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="/">
-                
-                </a>
+                <Link className="nav-link text-white" to="/">
+                   Home
+                </Link>
               </li>
-           
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/cart">
+                   Cart
+                </Link>
+              </li>
             </ul>
             <div>
             
-              <button className="btn btn-primary" disabled={true}>
               
-              </button>
+              <h3>Cart: {getShow.length}</h3>
+             
             </div>
           </div>
         </div>

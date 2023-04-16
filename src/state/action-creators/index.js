@@ -16,8 +16,17 @@ return (dispatch) =>{
     payload: value,
   })
 }
-
 }
+
+
+export const removetoCart = (value)=>{
+  return (dispatch) =>{
+    dispatch({
+      type:"remove",
+      payload: value,
+    })
+  }
+  }
 
 export const depositMoney = (amount) => {
   return (dispatch) => {

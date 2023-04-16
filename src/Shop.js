@@ -14,9 +14,8 @@ const Shop = () => {
   const {addtoCart,getApiData} = bindActionCreators(actionCreators, dispatch);
 
   const products = useSelector((state) => state.addValue);
-  const getShow = useSelector((state) => state.getValue);
 //   const val = useSelector((state) => state.value);
-console.log(getShow);
+// console.log(getShow.length);
 return (
     <>
       {/* <div>
@@ -31,8 +30,7 @@ return (
         <button className='btn btn-warning mx-2' onClick={()=>{removeCart(1)}}>Remove To Cart</button>
 
         </div> */}
-        <h1>Cart</h1>
-        <h1>Cart</h1>
+        
       <div
         style={{
           width: "100%",
