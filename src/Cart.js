@@ -11,6 +11,8 @@ const Cart = () => {
   const getShow = useSelector((state) => state.getValue);
 return (
     <>
+       <h2 style={{textAlign:"center",margin:"20px 0px"}}>Added products</h2>
+
         <div
         style={{
           width: "100%",
@@ -20,10 +22,13 @@ return (
           justifyContent: "center",
         }}
       >
-        {getShow.map(pro => (
+             {getShow.map(pro => (
           <div
             style={{
               width: "30%",
+              display:'flex',
+              flexBasis:'50%',
+              flexDirection:'column',
               margin: "20px",
               padding: "20px",
               boxShadow: "2px 2px 10px -2px black",
@@ -34,7 +39,7 @@ return (
             <img src={pro.image} style={{ width: "50px" }} alt="" />
             <h6>Price : {pro.price}</h6>
             <h5>{pro.title}</h5>
-            <button
+            <button style={{alignSelf:'flex-start',margin:'auto 0px' }}
               className="btn btn-warning"
               onClick={() => 
                 removetoCart(pro.id)

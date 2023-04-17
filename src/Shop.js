@@ -30,7 +30,8 @@ return (
         <button className='btn btn-warning mx-2' onClick={()=>{removeCart(1)}}>Remove To Cart</button>
 
         </div> */}
-        
+           <h2 style={{textAlign:"center",margin:"20px 0px"}}>List of the Available products</h2>
+
       <div
         style={{
           width: "100%",
@@ -45,17 +46,22 @@ return (
           <div
             style={{
               width: "30%",
+           flexBasis:'50%',
+              display:'flex',
+              flexDirection:"column",
               margin: "20px",
               padding: "20px",
               boxShadow: "2px 2px 10px -2px black",
               borderRadius: "2px",
+             
             }}
             key={items.id}
           >
             <img src={items.image} style={{ width: "50px" }} alt="" />
-            <h6>Price : {items.price}</h6>
+            <h5>Price : {items.price}</h5>
             <h5>{items.title}</h5>
-            <button
+             <h5>Rating : {items.rating.rate} ({items.rating.count} Customers Reviews)</h5>
+            <button style={{alignSelf:'flex-start',margin:'auto 0px' }}
               className="btn btn-warning"
               onClick={() => 
                 addtoCart(items)
